@@ -14,7 +14,7 @@ module.exports = {
   rules: {
     'prettier/prettier': 'error',
     'react/prop-types': 'off',
-    // 'react/react-in-jsx-scope': 'off',
+    'react/react-in-jsx-scope': 'off',
   },
   parserOptions: {
     ecmaVersion: 2018,
