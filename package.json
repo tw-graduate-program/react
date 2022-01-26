@@ -4,10 +4,11 @@
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^12.1.0",
+    "@testing-library/react": "^11.1.0",
     "@testing-library/react-hooks": "^7.0.2",
     "@testing-library/user-event": "^13.2.1",
     "axios": "^0.21.4",
+    "cypress": "^9.3.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.25.1",
@@ -25,9 +26,11 @@
     "test": "react-scripts test",
     "test:coverage": "react-scripts test --coverage --watchAll=false",
     "eject": "react-scripts eject",
-    "server": "json-server --watch json-server/api.json --port 3001",
+    "server": "json-server --watch json-server/api.json -p 8080",
     "format": "prettier --write \"**/*.{js,css,scss,md}\"",
-    "lint": "eslint \"src/\" --cache --fix --format table"
+    "lint": "eslint \"src/\" --cache --fix --format table",
+    "cy:open": "cypress open",
+    "cy": "cypress run --headless"
   },
   "eslintConfig": {
     "extends": [
