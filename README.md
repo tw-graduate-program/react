@@ -1,70 +1,122 @@
-# Getting Started with Create React App
+# Assignment TODO React TDD
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 简介
+本次 assignment 的目标是引入 React、UI 集成测试、组件测试，以 TDD 的方式实现 Todo React Application。
 
-## Available Scripts
+## 需求说明
+需求说明请查看 [需求说明.md](需求说明.md)
 
-In the project directory, you can run:
+## 技术实现要求
+- React
+  - 使用 React 
+  - 组件内部状态管理使用 React Hooks
+  - 全局状态管理库使用 Context + useReducer hooks
+- TDD 
+  - 编码开始前，介绍 Tasking 结果，并记录在录屏中
+  - 遵守 TDD Cycle：Red -> Green -> Refactoring
+  - 遵守 The 3 Laws of TDD
+  - 小步提交
+    
+**现在是学习阶段，我们是在“刻意练习”。不管要实现的需求或任务有多么简单，请按照上述要求实现需求。**
 
-### `yarn start`
+## 录屏要求
+录屏中请包含以下内容
+- 简要介绍 Tasking 的结果
+- 至少保证 **一个功能的 TDD 过程** 出现在录屏中，包含 UI 集成测试、组件测试
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+另外，大家在本次录屏中可以适当减少解说的时间，只需说明当前要开始或者正在进行的步骤即可，不用像 coach 在 demo 中那样“啰嗦”:P
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 提交要求
+- 请在建议的完成时间内提交，提交时请确保录屏也已完成；
+- 通过金数据表单提交 assignment，提交成功后会收到系统通知；
+- 批改 assignment 会使用提交时间点所对应的版本，请务必在确认无误后再进行提交；
+- 获取录屏的具体方式请写在 RECORDING.md 文件中，确保 buddy/coach 能够访问；
+- 本次 assignment 录屏时长需在 90 分钟以内；
 
-### `yarn test`
+## 评分标准
+Buddy 会根据以下指导规则对大家本次的 assignment 进行评级。
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**特别提醒：**
 
-### `yarn build`
+本次的 assignment 只是为了帮助大家了解自己的学习情况，不是为了考试评级，请大家不要有过多的心理负担。  
+给出一个明确的评级指导规则，是为了一方面让 buddy 们尽量能够统一标准。另一方面，也让大家能够明确目标。  
+对于初学者而言，能在学完当前 Step 后：  
+- 做到 Level-1 👉🏻 不错喽
+- 做到 Level-2 👉🏻 很好
+- 做到 Level-3 👉🏻 Fantastic!
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Level-0
+1. 无法满足 Level-1 的所有要求时，则为 Level-0。
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Level-1
+1. 在录屏的开始展示并简要介绍 tasking 结果
+2. 正确通过 npm 安装依赖，启动前端服务和 json-server
+3. 至少完成 list、add 功能
+4. 符合技术实现要求一节所列要求
+5. 有测试，但不一定严格遵循 TDD Cycle 或 3 Laws
+6. 小步提交
+7. 正确使用 React 状态管理，数据流，生命周期
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Level-2
+1. 完成所有要求的功能：list、add、update、delete
+2. 有测试，且能基本做到遵循 TDD Cycle 或 3 Laws，即基本上总是测试先行（Test First）
+3. TDD 过程中明确的体现出重构过程，但可以不够频繁或充分
 
-### `yarn eject`
+### Level-3
+1. 明确的体现出了频繁的 “快速实现” 和 “重构” 两个阶段的交替过程
+2. UI 集成测试、组件测试，JS单元测试覆盖 case 较全，且测试 case 得到有效验证
+3. 代码基本符合 Clean Code 要求
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## 前端环境准备
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 下载依赖
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```bash
+npm install
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### 运行网站
 
-## Learn More
+请执行如下代码运行网站并打开页面：
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+npm start
+```
+之后在浏览器中访问：http://localhost:3000
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 启动 Json Server
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+npm run server
+```
+启动 json server 后可以，可以使用以下 API
+- 获取 tasks 数据:
+```
+  URL: 'http://localhost:8080/tasks'
+  Method: GET
+  Response status: 200
+  Response body 示例: [{id: 1, name: 'xx', completed: false}, {id: 2, name: 'xx', completed: false}]
+```
+- 创建 task:
+```
+  URL: 'http://localhost:8080/tasks'
+  Method: POST
+  Request body 示例: {name: 'xx', completed: false}
+  Response status: 201
+  Response body 示例: {id: 1, name: 'xx', completed: false}
+```
+- 删除指定 id 的 task:
+```
+  URL: 'http://localhost:8080/tasks/${id}'
+  Method: DELETE,
+  Response status: 204
+  Response body 示例: {}
+```
+- 修改指定 id 的 task:
+```
+  URL: 'http://localhost:8080/tasks/${id}'
+  Method: PUT,
+  Request body 示例: {name: 'xx', completed: false}
+  Response status: 200
+  Response body 示例: {id: 1, name: 'xx', completed: false}
+```
