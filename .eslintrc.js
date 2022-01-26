@@ -10,6 +10,7 @@ module.exports = {
     'eslint:recommended',
     'plugin:prettier/recommended',
     'plugin:react/recommended',
+    'plugin:cypress/recommended',
   ],
   rules: {
     'prettier/prettier': 'error',
