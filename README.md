@@ -4,19 +4,25 @@
 本次 assignment 的目标是引入 React、UI 集成测试、组件测试，以 TDD 的方式实现 Todo React Application。
 
 ## 需求说明
-需求说明请查看 [需求说明.md](需求说明.md)
+需求说明请查看 [需求说明.md](需求说明.md)   
+需求变更提醒：对于新增的 todo 是否显示在第一个位，本次不做要求，两可。
 
 ## 技术实现要求
 - React
-  - 使用 React 
+  - 使用 React
   - 组件内部状态管理使用 React Hooks
   - 全局状态管理库使用 Context + useReducer hooks
-- TDD 
+- TDD
   - 编码开始前，介绍 Tasking 结果，并记录在录屏中
   - 遵守 TDD Cycle：Red -> Green -> Refactoring
   - 遵守 The 3 Laws of TDD
   - 小步提交
-    
+  - 遵循
+    - 核心业务需求的实现采用： UI integration Test Drive Development
+    - 业务细节的实现采用： Unit / Component Test Drive Development
+    - 重构出来的代码： 按需加上单元测试
+- CSS 样式的要求优先级最低
+
 **现在是学习阶段，我们是在“刻意练习”。不管要实现的需求或任务有多么简单，请按照上述要求实现需求。**
 
 ## 录屏要求
