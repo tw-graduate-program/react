@@ -115,7 +115,7 @@ npm run server
 ```
   URL: 'http://localhost:8080/tasks/${id}'
   Method: DELETE,
-  Response status: 204
+  Response status: 200
   Response body 示例: {}
 ```
 - 修改指定 id 的 task:
