@@ -21,27 +21,36 @@
     - 核心业务需求的实现采用： UI integration Test Drive Development
     - 业务细节的实现采用： Unit / Component Test Drive Development
     - 重构出来的代码： 按需加上单元测试
+- 使用常用快捷键，包括但不限于以下几种
+  - 1. 切换最近修改文件（Mac: ⌘ + E / Windows: Ctrl + E）
+  - 2. 补全代码（Mac: ⌥ + Enter / Windows: Alt + Enter）
+  - 3. 提取变量 （Mac: ⌘ + ⌥ + V / Windows: Ctrl + Alt + V）
+  - 4. 提取常量 （Mac: ⌘ + ⌥ + V / Windows: Ctrl + Alt + C）
+  - 5. 提取方法 （Mac: ⌘ + ⌥ + M / Windows: Ctrl + Alt + M）
+  - 6. 格式化代码 (Mac: ⌘ + ⌥ + L / Windows: Ctrl + Alt + L)
 - CSS 样式的要求优先级最低
 
 **现在是学习阶段，我们是在“刻意练习”。不管要实现的需求或任务有多么简单，请按照上述要求实现需求。**
 
 ## 录屏要求
-**特别提醒：**
+录屏中请包含以下内容
+- 简要介绍 Tasking 的结果
+- 至少保证 **一个功能的 TDD 过程 (coach demo 之外的需求，比如删除或者修改 task)** 出现在录屏中，包含 UI 集成测试、组件测试
 
-本次 assignment 无需录制编码过程视频，请在编码完成后录制 15 分钟以内的讲解视频
-
-讲解视频可包括：
-- 简要介绍 tasking 结果
-- 代码结构
-- 选取一个 case，简单讲解一下自己通过 TDD 实现的大致流程，TDD 的过程中包含了哪些测试等
+另外，大家在本次录屏中可以适当减少解说的时间，只需说明当前要开始或者正在进行的步骤即可，不用像 coach 在 demo 中那样“啰嗦”
 
 ## 提交要求
 - 请在建议的完成时间内提交，提交时请确保录屏也已完成；
 - 通过金数据表单提交 assignment，提交成功后会收到系统通知；
 - 批改 assignment 会使用提交时间点所对应的版本，请务必在确认无误后再进行提交；
 - 获取录屏的具体方式请写在 RECORDING.md 文件中，确保 buddy/coach 能够访问；
-- 本次 assignment 录屏时长在 15 分钟以内；
-- **因为录屏时间有限，无法体现编码过程，buddy 只能通过 commit 和代码来判断大家是否按照 TDD 实现需求，所以大家一定要做好小步提交**
+- 本次 assignment 录屏时长需在 90 分钟以内；
+
+## 提交要求
+- 请在建议的完成时间内提交，提交时请确保录屏也已完成；
+- 通过金数据表单提交 assignment，提交成功后会收到系统通知；
+- 批改 assignment 会使用提交时间点所对应的版本，请务必在确认无误后再进行提交；
+- 获取录屏的具体方式请写在 RECORDING.md 文件中，确保 buddy/coach 能够访问；
 
 ## 评分标准
 Buddy 会根据以下指导规则对大家本次的 assignment 进行评级。
@@ -71,11 +80,13 @@ Buddy 会根据以下指导规则对大家本次的 assignment 进行评级。
 1. 完成所有要求的功能：list、add、update、delete
 2. 有测试，且能基本做到遵循 TDD Cycle 或 3 Laws，即基本上总是测试先行（Test First）
 3. TDD 过程中明确的体现出重构过程，但可以不够频繁或充分
+4. 能够使用部分常用快捷键
 
 ### Level-3
 1. 明确的体现出了频繁的 “快速实现” 和 “重构” 两个阶段的交替过程
 2. UI 集成测试、组件测试，JS单元测试覆盖 case 较全，且测试 case 得到有效验证
 3. 代码基本符合 Clean Code 要求
+4. 大多数时候都使用快捷键
 
 ## 前端环境准备
 
