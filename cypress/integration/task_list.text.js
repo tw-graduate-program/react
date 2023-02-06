@@ -21,7 +21,7 @@ describe('task list', function () {
         cy.visit('/');
         // Then
         cy.get('li').should('have.length', 2);
-        cy.get('li').eq(0).contains(mockTakes[0].name);
-        cy.get('li').eq(1).contains(mockTakes[1].name);
+        cy.get('li').eq(0).children('input[type=checkbox]').next('label').contains(mockTasks[0].name);
+        cy.get('li').eq(1).children('input[type=checkbox]').next('label').contains(mockTasks[1].name);
     });
 })

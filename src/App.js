@@ -10,7 +10,11 @@ function App() {
 
   return (
     <div className="App">
-      {tasks.map(task => <li key={task.key}>{task.name}</li>)}
+      {tasks.map(task =>
+        <li key={task.key}>
+          <input type="checkbox" id={task.id} />
+          <label htmlFor={task.id}>{task.name}</label>
+        </li>)}
     </div>
   );
 }
