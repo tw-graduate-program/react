@@ -1,13 +1,11 @@
 import React, {useEffect, useState} from 'react';
-import axios from "axios";
+import {fetchTasks} from "./api/tasksFetchTasks";
 
 function App() {
   const [tasks, setTasks] = useState([]);
+
   useEffect(() => {
-    axios
-        .get('http://localhost:8080/tasks')
-        .then((response) => response.data)
-        .then((data) => setTasks(data));
+    fetchTasks().then((data) => setTasks(data));
   },[]);
 
   return (
