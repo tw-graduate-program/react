@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {fetchTasks} from "./api/tasksFetchTasks";
+import {fetchTasks} from "./api/tasks";
 import {TodoItem} from "./components/TodoItem";
 
 function App() {
