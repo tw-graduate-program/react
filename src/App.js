@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {fetchTasks} from "./api/tasks";
-import {TodoItem} from "./components/TodoItem";
+import {CompletedList} from "./components/CompletedList";
+import {TodoList} from "./components/TodoList";
 
 function App() {
   const [tasks, setTasks] = useState([]);
@@ -11,16 +12,8 @@ function App() {
 
   return (
     <div className="App">
-      <ul className="todo-list">
-        {tasks.filter((task) => !task.completed).map((task) => (
-          <TodoItem key={task.key} task={task}/>
-        ))}
-      </ul>
-      <ul className="completed-list">
-        {tasks.filter((task) => task.completed).map((task) => (
-          <TodoItem key={task.key} task={task}/>
-        ))}
-      </ul>
+      <TodoList tasks={tasks}/>
+      <CompletedList tasks={tasks}/>
     </div>
   );
 }

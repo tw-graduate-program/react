@@ -28,6 +28,7 @@ describe('task list', function () {
             .should('not.be.checked')
             .next('label')
             .contains(mockTasks[0].name);
+        cy.contains('h3', 'Completed');
         cy.get('.completed-list li')
             .eq(0)
             .children('input[type=checkbox]')
