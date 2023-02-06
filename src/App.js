@@ -11,9 +11,16 @@ function App() {
 
   return (
     <div className="App">
-      {tasks.map(task => (
-        <TodoItem key={task.key} task={task}/>
-      ))}
+      <ul className="todo-list">
+        {tasks.filter((task) => !task.completed).map((task) => (
+          <TodoItem key={task.key} task={task}/>
+        ))}
+      </ul>
+      <ul className="completed-list">
+        {tasks.filter((task) => task.completed).map((task) => (
+          <TodoItem key={task.key} task={task}/>
+        ))}
+      </ul>
     </div>
   );
 }

@@ -20,15 +20,16 @@ describe('task list', function () {
         // When
         cy.visit('/');
         // Then
-        cy.get('li').should('have.length', 2);
-        cy.get('li')
+        cy.get('.todo-list li').should('have.length', 1);
+        cy.get('.completed-list li').should('have.length', 1);
+        cy.get('.todo-list li')
             .eq(0)
             .children('input[type=checkbox]')
             .should('not.be.checked')
             .next('label')
             .contains(mockTasks[0].name);
-        cy.get('li')
-            .eq(1)
+        cy.get('.completed-list li')
+            .eq(0)
             .children('input[type=checkbox]')
             .should('be.checked')
             .next('label')
