@@ -9,7 +9,11 @@ const TaskProvider = ({ children }) => {
     fetchTasks().then((data) => setTasks(data));
   },[]);
 
-  return <TaskContext.Provider value={tasks}>{children}</TaskContext.Provider>;
+  const addTask = (task) => {
+    setTasks([...tasks,task]);
+  };
+
+  return <TaskContext.Provider value={{tasks, addTask}}>{children}</TaskContext.Provider>;
 };
 
 

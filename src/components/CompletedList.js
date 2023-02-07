@@ -3,7 +3,7 @@ import {TaskList} from "./TaskList";
 import {TaskContext} from "../store/TaskProvider";
 
 export function CompletedList() {
-  const tasks = useContext(TaskContext);
+  const { tasks } = useContext(TaskContext);
   const completedTasks = tasks.filter((task) => task.completed);
   return (
     <section>
