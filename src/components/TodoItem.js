@@ -33,7 +33,7 @@ export const TodoItem = ({ task: { id, name, completed } }) => {
     <input type="checkbox" id={id} checked={completed} onChange={() => {
       return handleUpdateClick();
     }}/>
-    <label htmlFor={id}>{name}</label>
+    <label>{name}</label>
     <button onClick={() => {
       return handleDelBtnClick();
     }}>delete</button>
