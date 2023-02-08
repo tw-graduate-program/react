@@ -17,7 +17,22 @@ const TaskProvider = ({ children }) => {
     setTasks(tasks.filter((t) => t.id !== id));
   };
 
-  return <TaskContext.Provider value={{tasks, addTask, deleteTask}}>{children}</TaskContext.Provider>;
+  const updateTask = ({ id, name, status }) => {
+    const newTaskList = tasks.map(task => {
+      if (task.id === id) {
+        return {
+          "id": id,
+          "name": name,
+          "completed": status
+        }
+      } else {
+        return task;
+      }
+    });
+    setTasks(newTaskList);
+  }
+
+  return <TaskContext.Provider value={{tasks, addTask, deleteTask, updateTask}}>{children}</TaskContext.Provider>;
 };
 
 
