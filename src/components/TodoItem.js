@@ -34,8 +34,6 @@ export const TodoItem = ({ task: { id, name, completed } }) => {
       return handleUpdateClick();
     }}/>
     <label>{name}</label>
-    <button onClick={() => {
-      return handleDelBtnClick();
-    }}>delete</button>
+    <button onClick={handleDelBtnClick}>delete</button>
   </li>
 )};
