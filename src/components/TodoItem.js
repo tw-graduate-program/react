@@ -1,20 +1,17 @@
-import React, {useContext} from "react";
-import axios from "axios";
+import React, {useContext, useRef, useState} from "react";
 import {TaskContext} from "../store/TaskProvider";
+import {EnterKeyCode} from "../const/EnterKeyCode";
+import {deleteRequest, updateNameRequest, updateRequest} from "../httpRequest/UpdateRequest";
 
-function deleteRequest(id) {
-  return axios.delete(`http://localhost:8080/tasks/${id}`).then(response => response.data);
-}
-
-function updateRequest({ id, name, status }) {
-  return axios.put(`http://localhost:8080/tasks/${id}`,{
-    "id": id,
-    "name": name,
-    "completed": status
-  }).then(response => response.data);
-}
-
+const defaultInputHidden = "hidden";
+const showInput = "text";
+const defaultLabelShow = false;
+const hiddenLabel = true;
 export const TodoItem = ({ task: { id, name, completed } }) => {
+  const [taskName, setTaskName] = useState("");
+  const [labelHidden, setLabelHidden] = useState(defaultLabelShow);
+  const [inputHidden, setInputHidden] = useState(defaultInputHidden);
+  const inputEl = useRef(null);
   const { deleteTask, updateTask } = useContext(TaskContext);
 
   const handleDelBtnClick = () => {
@@ -28,12 +25,34 @@ export const TodoItem = ({ task: { id, name, completed } }) => {
     return updateRequest({ id, name, status });  // http
   };
 
+  const handleUpdateNameClick = async () => {
+    await setLabelHidden(hiddenLabel);
+    setInputHidden(showInput);
+    inputEl.current.focus();
+  };
+
+  const updateTaskName = async (event) => {
+    if (event.keyCode === EnterKeyCode) {
+      updateNameRequest(id,taskName,completed)
+      .then((data)=>{
+          updateTask(data);
+      });
+      setLabelHidden(defaultLabelShow);
+      setInputHidden(defaultInputHidden);
+    }
+  };
+
+  const updateCancel = () => {
+    setLabelHidden(defaultLabelShow);
+    setInputHidden(defaultInputHidden);
+    setTaskName("");
+  };
+
   return (
   <li>
-    <input type="checkbox" id={id} checked={completed} onChange={() => {
-      return handleUpdateClick();
-    }}/>
-    <label>{name}</label>
+    <input type="checkbox" id={id} checked={completed} onChange={handleUpdateClick}/>
+    <label hidden={labelHidden} onClick={handleUpdateNameClick}>{name}</label>
+    <input value={taskName} ref={inputEl} type={inputHidden} onChange={(event) => {setTaskName(event.target.value)}} onKeyDown={updateTaskName} onBlur={updateCancel}/>
     <button onClick={handleDelBtnClick}>delete</button>
   </li>
 )};
