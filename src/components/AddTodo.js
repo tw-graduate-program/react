@@ -14,6 +14,7 @@ export function AddTodo() {
     .then((data) => {
       addTask(data);
     });
+    setTodo('');
   };
 
   return (
