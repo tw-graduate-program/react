@@ -3,6 +3,7 @@ import {CompletedList} from "./components/CompletedList";
 import {TodoList} from "./components/TodoList";
 import TaskProvider from "./store/TaskProvider";
 import {AddTodo} from "./components/AddTodo";
+import './styles/todo-lists.scss';
 
 function App() {
   return (
